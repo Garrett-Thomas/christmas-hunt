@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 20px;
+	color: whitesmoke;
+	background-color: #161616;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,
+p {
+	text-align: center;
+	margin: 2rem 0 4rem 0;
+}
+p {
+	padding: 0 3%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input[type='text'] {
+	width: 50%;
+	padding: 1% 0;
+	position: sticky;
 }
 
-.App-link {
-  color: #61dafb;
+.accordion {
+	max-width: 600px;
+	margin: 2rem auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.accordion-title {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	cursor: pointer;
+	background-color: green;
+}
+
+.accordion-title:hover {
+	background-color: lightgreen;
+}
+
+.accordion-title,
+.accordion-content {
+	padding: 1rem;
+}
+
+.accordion-content {
+	background-color: lightcoral;
+	justify-content: center;
+}
+.frame-container{
+	display: grid;
+	justify-content: center;
+	margin:0;
+}
+iframe {
+	margin: 2% 0;
+	--preferred-width: fit-content;
+	width: var(--preferred-width);
+	height: calc(2.4 * var(--preferred-width));
+}
+@media only screen and (max-width: 700px) {
+	body {
+		font-size: 18px;
+	}
+
+	.accordion {
+		width: 90%;
+	}
+	iframe {
+		max-width: 100;
+		max-height: 200;
+	}
 }

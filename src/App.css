@@ -55,13 +55,12 @@ input[type='text'] {
 .frame-container{
 	display: grid;
 	justify-content: center;
-	margin:0;
 }
 iframe {
 	margin: 2% 0;
-	--preferred-width: fit-content;
+	--preferred-width: 100%;
 	width: var(--preferred-width);
-	height: calc(2.4 * var(--preferred-width));
+	height: calc(var(--preferred-width));
 }
 @media only screen and (max-width: 700px) {
 	body {

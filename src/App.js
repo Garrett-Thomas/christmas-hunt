@@ -2,25 +2,9 @@ import './App.css';
 import Accordian from './Accordian';
 import { JSON36 } from 'weird-json';
 import { accordionData } from './data';
-import { backupData } from './backupdata';
 import React from 'react';
 
 function App() {
-	let newData = `Your first task is to connect to a rasperry pi and search for a file named KEY.txt.
-	You will connect to the rasperry pi over ssh with username <code>"thomas"</code> and password <code>"hotcinnamon"</code>.
-	The ip address of the rasperry pi is <code>"192.168.86.33"</code>. Once connected, use the command line tool <code>find</code> to search the 
-	filesystem for a file named <code>"KEY.txt"</code>. That file will contain the key for the next section.
-	<div class="frame-container">
-	<iframe width="476" height="200" src="https://www.youtube.com/embed/v45p_kJV9i4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	<iframe width="476" height="200" src="https://www.youtube.com/embed/MkR_rqHzorM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>`;
-	accordionData.forEach(({ title, content, password }) => {
-		console.log(
-			`Title: ${JSON36.parse(title)} \n Content: ${JSON36.parse(
-				content
-			)} \n Password: ${JSON36.parse(password)}`
-		);
-	});
 	return (
 		<div className="App">
 			<h1>Christmas Virtual Scavenger Hunt!</h1>
@@ -38,12 +22,12 @@ function App() {
 				claim that prize! The key to the first section is{' '}
 				<code>"tistheseason"</code>.
 			</p>
-			{backupData.map(({ title, content, password }, index) => (
+			{accordionData.map(({ title, content, password }, index) => (
 				<Accordian
 					key={index}
-					title={title}
-					content={content}
-					password={password}
+					title={JSON36.parse(title)}
+					content={JSON36.parse(content)}
+					password={JSON36.parse(password)}
 				/>
 			))}
 		</div>

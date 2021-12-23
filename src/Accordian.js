@@ -24,7 +24,6 @@ const Accordian = ({ title, content, password }) => {
 	}
 
 	const checkPassword = async (event) => {
-		console.log(isActive);
 		if ((await sha256(event.target.value)) === password) {
 			setIsActive({ clickable: true, password: true });
 		} else {

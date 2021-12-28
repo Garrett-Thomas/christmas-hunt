@@ -26,6 +26,7 @@ input[type='text'] {
 	position: sticky;
 }
 
+/* Accordian Styling */
 .accordion {
 	max-width: 600px;
 	margin: 2rem auto;
@@ -52,16 +53,22 @@ input[type='text'] {
 	background-color: lightcoral;
 	justify-content: center;
 }
+
+
 .frame-container{
 	display: grid;
 	justify-content: center;
 }
+
+/* Styling for the videos. */
 iframe {
 	margin: 2% 0;
 	--preferred-width: 100%;
 	width: var(--preferred-width);
 	height: calc(var(--preferred-width));
 }
+
+/* Mobile Styles */
 @media only screen and (max-width: 700px) {
 	body {
 		font-size: 18px;

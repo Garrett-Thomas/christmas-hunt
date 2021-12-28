@@ -1,8 +1,14 @@
 import './App.css';
-import Accordian from './Accordian';
-import { JSON36 } from 'weird-json';
-import { accordionData } from './data';
 import React from 'react';
+
+// Imports the Accordian component from Accordian.js
+import Accordian from './Accordian';
+
+// This is the library I used to obfuscated and deobfuscate the data.
+import { JSON36 } from 'weird-json';
+
+// This imports the obfuscated data from data.js
+import { accordionData } from './data';
 
 function App() {
 	return (
@@ -22,6 +28,10 @@ function App() {
 				claim that prize! The key to the first section is{' '}
 				<code>"tistheseason"</code>.
 			</p>
+
+			{/* This makes a new Accordian component for every object in accordianData, passing in the parameters.
+			By calling JSON36.parse() on data as its passed in, it deobfuscates it and ensures that the 
+			text is displayed as text and not gibberish*/}
 			{accordionData.map(({ title, content, password }, index) => (
 				<Accordian
 					key={index}

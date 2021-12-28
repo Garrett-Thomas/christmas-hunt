@@ -1,3 +1,6 @@
+
+// All this data was obfuscated w/ JSON36. I wanted to make it at least a little bit more 
+// difficult for a person to cheat on this.
 const accordionData = [
 	{
 		title: 'a002db002t002r0038002x00330032000w001dda',
